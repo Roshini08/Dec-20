@@ -1,0 +1,89 @@
+// To find factorial 
+  
+ #include <stdio.h> 
+ int main() 
+ { 
+     int n; 
+     printf("Enter a number: "); 
+     scanf("%d",&n); 
+     printf("The factorial of %d is %d",n,fac(n)); 
+ } 
+ int fac(int n) 
+ { 
+     if(n<=2)
+     { 
+         return n; 
+     } 
+     else 
+     { 
+     return (n*fac(n-1)); 
+ } 
+  
+ } 
+  
+ ******************************************** 
+  
+ output  
+  
+ Enter num : 8  
+ fibonaci series : 0 1 1 2 3 5 8 13  
+  
+  
+ ******************************************** 
+  
+ // Fibonacci series without function 
+  
+ #include<stdio.h> 
+ int main(){ 
+     int x=0,y=1,n,z; 
+     printf("Enter num : "); 
+     scanf("%d",&n); 
+     printf("Fibonacci series : "); 
+     printf("%d %d ",x,y); 
+     for(int i=1;i<=n-2;i++){ 
+         z=x+y; 
+         x=y; 
+         y=z; 
+         printf("%d ",z); 
+     } 
+ } 
+  
+ ******************************************** 
+  
+ output 
+  
+ Enter num : 6  
+ Fibonacci series : 0 1 1 2 3 5 8  
+  
+ ******************************************** 
+  
+ // Fibonacci series with function 
+  
+ #include<stdio.h> 
+ int main() 
+ { 
+     int a=0,b=1,n; 
+     printf("Enter num : "); 
+     scanf("%d",&n); 
+     printf("Fibonacci series : "); 
+     for(int i=0;i<=n;i++) 
+     { 
+         printf("%d ",fib(i)); 
+     } 
+ } 
+ int fib(int n) 
+ { 
+     if(n<=1){ 
+         return n; 
+     } 
+     else { 
+         return fib(n-1)+fib(n-2); 
+     } 
+ } 
+  
+ ******************************************** 
+  
+ output 
+  
+ Enter num : 8  
+ Fibonacci series : 0 1 1 2 3 5 8 13
